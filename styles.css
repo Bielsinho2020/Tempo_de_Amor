@@ -50,14 +50,16 @@ html {
 }
 
 .counter-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 51, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    margin: 20vh auto;
 }
 
 #counter {
@@ -154,5 +156,27 @@ html {
         width: 80px;
         height: 80px;
         top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .counter-container {
+        margin: 10vh auto;
+        padding: 15px;
+    }
+
+    #counter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .time-unit {
+        font-size: 1.5em;
+    }
+
+    .poem {
+        margin-top: 20px;
+        padding: 15px;
     }
 }
