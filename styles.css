@@ -117,3 +117,42 @@ html {
     margin: 20px 0;
     line-height: 1.6;
 }
+
+@media screen and (max-width: 768px) {
+    .counter-container {
+        width: 90%;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    #counter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .time-unit {
+        font-size: 1.8em;
+        margin: 5px 0;
+    }
+
+    .poem {
+        width: 80%;
+        margin: 20px auto;
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .moon, .sun {
+        width: 60px;
+        height: 60px;
+        top: 30px;
+    }
+
+    .eclipse {
+        width: 80px;
+        height: 80px;
+        top: 20px;
+    }
+}
