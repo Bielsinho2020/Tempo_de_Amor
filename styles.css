@@ -103,3 +103,17 @@ html {
   background: #fff;
   border-radius: 50%;
 }
+
+.poem {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-top: 30px;
+    font-style: italic;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.poem p {
+    margin: 20px 0;
+    line-height: 1.6;
+}
