@@ -37,7 +37,7 @@ function animateEclipse() {
     const eclipse = document.querySelector('.eclipse');
 
     let progress = 0;
-    const animationDuration = 30000;
+    const animationDuration = 5000;
 
     function animate() {
         progress += 16.67;
