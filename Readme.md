@@ -1,4 +1,5 @@
 Contador de Amor ❤️
+
 Um contador de tempo de relacionamento com animação de eclipse e poema romântico.
 🌟 Funcionalidades
 Contador preciso mostrando anos, meses, dias, horas, minutos e segundos desde o início do relacionamento
