@@ -1,150 +1,147 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    background: #000033;
-    font-family: Arial, sans-serif;
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: relative;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: #000033;
+  font-family: Arial, sans-serif;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #000033, #000066);
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #000033, #000066);
+  z-index: 1;
 }
 
-.content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.moon, .sun {
-    position: fixed;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    top: 50px;
-    z-index: 2;
+.moon,
+.sun {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 50px;
+  z-index: 2;
 }
 
 .moon {
-    left: 50px;
-    background: #f0f0f0;
-    box-shadow: 0 0 20px #f0f0f0;
+  left: 50px;
+  background: #f0f0f0;
+  box-shadow: 0 0 20px #f0f0f0;
 }
 
 .sun {
-    right: 50px;
-    background: #ffff00;
-    box-shadow: 0 0 20px #ffff00;
+  right: 50px;
+  background: #ffff00;
+  box-shadow: 0 0 20px #ffff00;
 }
 
 .eclipse {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #000;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    z-index: 2;
-}
-
-.counter-container {
-    background: rgba(0, 0, 51, 0.5);
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 120px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-}
-
-#counter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    color: white;
-}
-
-.time-block {
-    font-size: 2em;
-    margin: 5px 0;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-.label {
-    display: block;
-    font-size: 0.5em;
-    margin-top: 5px;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  z-index: 3;
+  opacity: 0;
 }
 
 .poem {
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px;
-    background: rgba(0, 0, 51, 0.5);
-    border-radius: 15px;
-    width: 90%;
-    max-width: 400px;
-    line-height: 1.6;
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(0, 0, 51, 0.5);
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.poem p {
+  margin: 15px 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.counter-container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 400px;
+  margin: 150px auto 20px;
+  padding: 20px;
+  background: rgba(0, 0, 51, 0.5);
+  border-radius: 15px;
+  text-align: center;
+}
+
+#counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.time-block {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.time-block span:first-child {
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.label {
+  font-size: 1.2em;
+  margin-top: 5px;
+  display: block;
 }
 
 .star {
-    position: fixed;
-    width: 2px;
-    height: 2px;
-    background: white;
-    border-radius: 50%;
-    z-index: 1;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
 }
 
 @keyframes twinkle {
-    0% { opacity: 0.3; }
-    50% { opacity: 1; }
-    100% { opacity: 0.3; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .moon, .sun {
-        width: 60px;
-        height: 60px;
-        top: 30px;
-    }
-    
-    .eclipse {
-        width: 80px;
-        height: 80px;
-        top: 20px;
-    }
-    
-    .counter-container {
-        margin-top: 100px;
-    }
-    
-    .time-block {
-        font-size: 1.5em;
-    }
-    
-    .poem {
-        font-size: 0.9em;
-    }
+  .poem {
+    font-size: 1em;
+    padding: 15px;
+    margin: 15px auto;
+    width: 85%;
+  }
+
+  .poem p {
+    margin: 10px 0;
+  }
 }
